@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --firstColor: #9adde0;
+    --bgColor: #1f1d2a;
+    --defaultColor: #f5f5f5;
+    --texColor1: #b0b0b1;
+    --cardBg1: #121218;
+    --cardBg2: #1b1a23;
+    --acad: #e84959;
+    --bgTempo: radial-gradient(circle, rgba(52,73,180,1) 0%, rgba(133,105,148,1) 100%); 
+    --bgAnterior: radial-gradient(circle, rgba(52,73,180,1) 0%, rgba(69,87,89,1) 100%); 
+    --bgPage: linear-gradient(120deg, rgba(15,21,34,1) 1%, rgba(4,8,23,1) 23%, rgba(11,9,20,1) 58%, rgba(31,29,42,1) 100%); 
+}
+
+body {
+    background: blue;
+    color: var(--defaultColor);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 6.5rem auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_nav {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-right: 3rem;
+   
+}
+.logo_nav img {
+    margin: 5px;
+    width: 2.1rem;
+    filter: invert(100%) sepia(52%) saturate(2047%) hue-rotate(152deg) brightness(95%) contrast(84%);
+}
+
+.section__navbar { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgb(231, 16, 4) 1%, rgb(255, 0, 0) 100%); 
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    height: 4.5rem;
+    justify-content: flex-start;
+    padding: 3rem;
+}
+.menu__navbar h3:hover {
+    cursor: pointer;
+    color: var(--firstColor);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.menu__navbar .anchor {
+    color: white;
+    text-decoration: none;
+}
+
+.menu__navbar {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 90%;
+}
+
+.nav__img--shoping {
+    position: relative;
+    width: 2.2rem;
+    filter: invert(100%) sepia(52%) saturate(2047%) hue-rotate(152deg) brightness(95%) contrast(84%);
+}
+.nav__img--shoping:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.3s;
+}
+
+.count__Shop {
+    position: absolute;
+    top: 5px;
+    width: 28px;
+    height: 25px;
+    background-color: green;
+    padding: 5px;
+    color: var(--bgTempo);
+    font-weight: 500;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
+.section__portada {
+    display: flex;
+    gap: 3rem;
+    margin-top: 5rem;
+    padding: 3rem;
+}
+.portada__content { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 1rem;
+    padding: 5rem;
+}
+
+.portada__image img {
+    background: var(--bgTempo);
+    border-radius: 1rem;
+}
+
+.portada__titles {
+    font-size: 2.7rem;
+    color: white;
+}
+
+.portada__content--title2 {
+    color: var(--acad);
+}
+
+.portada__content--text {
+    color: var(--acad);
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6rem;
+    letter-spacing: 1.4px;
+}
+
+.portada__content--price {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--defaultColor);
+}
+
+.button__discovery {
+    padding: 0.8rem;
+    border: none;
+    font-size: 16px;
+    background-color: red;
+    cursor: pointer;
+}
+.button__discovery:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+    background-color: var(--acad);
+    color: var(--defaultColor); 
+}
+
+.button__add {
+    padding: 1rem;
+    border: none;
+    font-size: 15px;
+    background-color: var(--cardBg1);
+    color: var(--defaultColor);
+    cursor: pointer;
+}
+.button__add:hover { 
+    transform: scale(1.03);
+    transition: 0.4s;
+    background-color: red;
+    color: var(--defaultColor);
+}
+
+
+
+.menu__shop {
+    padding: 1rem;
+    display: flex;
+    justify-content:center;
+    margin-top: 10rem;
+    width: 100%;
+    gap: 6rem;  
+}
+
+.menu__shop--title {
+    padding-right: 2rem;
+    padding-left: 4rem;
+    color: var(--firstColor);
+    text-align: center;
+}
+.menu__shop--title:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.4s;
+    color: red;
+}
+
+.conten__cards {
+     
+    width: 90%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 2rem;
+}
+
+.card__img {
+    background: aqua;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card__img img {
+    width: 100%;
+}
+
+.card__img img:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+    transition: 0.5s;
+}
+
+.card__content {
+    background-color: red;
+    border-radius: 0 0 1rem 1rem;
+    text-align: center;
+}
+
+.product__colection {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.product__colection .text__colection {
+    color: aqua;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.price__stock {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.price__stock .price {
+    color: var(--firstColor);
+}
+
+.card__buton {
+    width: 50%;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.05em;
+    color: #524689;
+    font-weight: 400;
+    background-color: var(--firstColor);
+}
+
+.card__buton:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+
+
+.btn__nodrop {
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+.btn__nodrop:hover {
+    background-color: #8e3636;
+    cursor: no-drop;
+}
+
+
+.clothes__buy {
+    background: linear-gradient(0deg, rgb(4, 115, 243) 0%, rgb(55, 55, 168) 100%);
+    width: 30%;
+    height: calc(100vh - 6rem) ;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: 0.8s;
+    padding: 1rem;
+}
+
+.clothes__buy--show {
+    transform: translateX(0);
+
+}
+
+.buy__items {
+    height: 80%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+    overflow-y: scroll;
+}
+
+.card__buy {
+    display: flex;
+}
+
+.img__buy {
+    width: 11rem;
+}
+
+.buy__content--card{
+
+    width: 75%;
+}
+.buycar__items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buycard__title {
+    color: var(--acad);
+    margin: 0 auto;
+}
+
+.buy__price {
+    color: var(--firstColor);
+}
+
+.buycar__btn {
+    width: 27px;
+    height: 27px;
+    border-radius: 3px;   
+    font-size: 18px;
+    font-weight: bolder;
+    border: none;
+    color: rgb(255, 2, 2);
+}
+
+
+.buycar__btn--del {
+    background-color: rgb(255, 255, 255);
+}
+.buycar__btn--del:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.buycar__btn--add {
+    background-color: rgb(255, 255, 255);
+}
+.buycar__btn--add:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.buycar__stock {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.buycar__clothes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    align-items: center;
+}
+
+.buycar__deleteItem {
+    width: 40px;
+    color: #373736;
+    filter: invert(11%) sepia(1%) saturate(4571%) hue-rotate(21deg) brightness(98%) contrast(73%);
+}
+.buycar__deleteItem:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.buy__total {
+    height: 20%;
+    padding: 1rem;
+    background-color: red;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+
+.total__result{
+    display: flex;
+    justify-content: center;
+    gap: 4rem; 
+    align-items: center;
+}
+
+.total__result img {
+    width: 2.6rem;
+    color: #d75b2e;
+    filter: invert(42%) sepia(44%) saturate(1049%) hue-rotate(333deg) brightness(96%) contrast(94%);;
+}
+
+.total__result--price {
+    color: var(--firstColor);
+}
+
+.boton__total {
+    width: 40%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.05em;
+    color: #524689;
+    font-weight: 500;
+    background-color: aqua;
+}
+
+.boton__total:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.carEmpty {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+}
+
+.img__carEmpty {
+    width: 12rem;
+
+}
+
+.text__carEmpty {
+    color: red;
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+}
+
+.text__footer{
+    display: flex;
+    justify-content: center;
+}
+.icono-github {
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
